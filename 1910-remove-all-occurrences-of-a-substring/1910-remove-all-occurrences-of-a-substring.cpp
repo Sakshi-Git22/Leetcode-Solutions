@@ -1,0 +1,13 @@
+class Solution {
+public:
+    string removeOccurrences(string s, string part) {
+      string ans="";
+      for(int i=0;i<s.length();i++){
+        ans+=s[i];
+        if(ans.length()>=part.length() && ans.substr(ans.length()-part.length())==part){
+            ans.erase(ans.length()-part.length());
+        }
+      }
+      return ans;
+    }
+};
